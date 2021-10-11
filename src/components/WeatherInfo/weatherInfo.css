@@ -1,0 +1,14 @@
+.weather-info {
+  width: 90vw;
+  height: 80px;
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+.weather-info__th {
+  border-bottom: 2px solid #000;
+}
+
+.weather-info__td {
+  text-align: center;
+}
