@@ -1,14 +1,18 @@
 .weather-info {
-  width: 90vw;
+  width: auto;
   height: 80px;
-  border: 2px solid #000;
   border-collapse: collapse;
 }
 
 .weather-info__th {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #ccc;
 }
 
 .weather-info__td {
   text-align: center;
+}
+
+.weather-info__td,
+.weather-info__th {
+  padding: 10px;
 }

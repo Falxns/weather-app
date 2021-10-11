@@ -1,4 +1,5 @@
 import React from "react";
+import "./header.css";
 import WeatherInfo from "../WeatherInfo/weatherInfo";
 import TemperatureSwitch from "../TemperatureSwitch/temperatureSwitch";
 import logoIcon from "../../assets/icons/logo.svg";
