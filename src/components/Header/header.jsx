@@ -1,11 +1,12 @@
 import React from "react";
 import WeatherInfo from "../WeatherInfo/weatherInfo";
 import TemperatureSwitch from "../TemperatureSwitch/temperatureSwitch";
+import logoIcon from "../../assets/icons/logo.svg";
 
 function Header() {
   return (
-    <header>
-      <img src="" alt="logo" />
+    <header className="header">
+      <img className="header__logo" src={logoIcon} alt="logo" />
       <WeatherInfo />
       <TemperatureSwitch />
     </header>
