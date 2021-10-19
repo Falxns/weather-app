@@ -1,0 +1,8 @@
+.header__search {
+  width: 15vw;
+  outline: none;
+}
+
+.header__search:focus {
+  border-color: #9c08c4;
+}
