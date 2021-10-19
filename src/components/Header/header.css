@@ -4,6 +4,7 @@
   grid-area: header;
   align-items: center;
   justify-content: space-between;
+  background-color: #befbff;
 }
 
 .header__logo {
