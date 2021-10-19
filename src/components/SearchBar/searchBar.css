@@ -1,6 +1,9 @@
 .header__search {
   width: 15vw;
   outline: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 .header__search:focus {
