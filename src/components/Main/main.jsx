@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.css';
+import './main.scss';
 import Panel from '../Panel/panel';
 
 function Main() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './temperatureSwitch.css';
+import './temperatureSwitch.scss';
 
 function TemperatureSwitch() {
   return (

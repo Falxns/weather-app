@@ -1,5 +1,5 @@
 import React from 'react';
-import './weatherInfo.css';
+import './weatherInfo.scss';
 
 function WeatherInfo() {
   return (
