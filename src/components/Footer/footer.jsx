@@ -1,6 +1,6 @@
-import React from "react";
-import "./footer.css";
-import githubIcon from "../../assets/icons/githubIcon.svg";
+import React from 'react';
+import './footer.css';
+import githubIcon from '../../assets/icons/githubIcon.svg';
 
 function Footer() {
   return (
