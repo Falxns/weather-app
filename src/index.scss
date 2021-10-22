@@ -1,0 +1,8 @@
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    [row1-start] 'header' 100px [row1-end]
+    [row2-start] 'main' calc(100vh - 180px) [row2-end]
+    [row3-start] 'footer' 80px[row3-end] / auto;
+}
