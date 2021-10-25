@@ -1,7 +1,7 @@
 import React from 'react';
 import './weatherInfo.scss';
 
-const WeatherInfo = ({ cityData }) => (
+const WeatherInfo = ({ data }) => (
   <table className="weather-info">
     <thead>
       <tr className="weather-info__tr">
@@ -24,24 +24,22 @@ const WeatherInfo = ({ cityData }) => (
     <tbody>
       <tr className="weather-info__tr">
         <td className="weather-info__td weather-info__city">
-          {!cityData ? 'N/A' : cityData.location.region}
+          {!data ? 'N/A' : data.city}
         </td>
         <td className="weather-info__td weather-info__temperature">
-          {!cityData ? 'N/A' : `${cityData.current.temp_c} °C`}
+          {!data ? 'N/A' : data.temp}
         </td>
         <td className="weather-info__td weather-info__cloudiness">
-          {!cityData ? 'N/A' : cityData.current.condition.text}
+          {!data ? 'N/A' : data.cloudiness}
         </td>
         <td className="weather-info__td weather-info__wind">
-          {!cityData
-            ? 'N/A'
-            : `${cityData.current.wind_dir} ${cityData.current.wind_kph} km/h`}
+          {!data ? 'N/A' : data.wind}
         </td>
         <td className="weather-info__td weather-info__pressure">
-          {!cityData ? 'N/A' : `${cityData.current.pressure_mb} mb`}
+          {!data ? 'N/A' : data.pressure}
         </td>
         <td className="weather-info__td weather-info__humidity">
-          {!cityData ? 'N/A' : `${cityData.current.humidity} %`}
+          {!data ? 'N/A' : data.humidity}
         </td>
       </tr>
     </tbody>
