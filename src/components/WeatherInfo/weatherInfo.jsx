@@ -1,5 +1,6 @@
 import React from 'react';
 import './weatherInfo.scss';
+import PropTypes from 'prop-types';
 
 const WeatherInfo = ({ data }) => (
   <table className="weather-info">
@@ -45,5 +46,20 @@ const WeatherInfo = ({ data }) => (
     </tbody>
   </table>
 );
+
+WeatherInfo.defaultProps = {
+  data: null,
+};
+
+WeatherInfo.propTypes = {
+  data: PropTypes.shape({
+    city: PropTypes.string,
+    temp: PropTypes.string,
+    cloudiness: PropTypes.string,
+    wind: PropTypes.string,
+    pressure: PropTypes.string,
+    humidity: PropTypes.string,
+  }),
+};
 
 export default WeatherInfo;
