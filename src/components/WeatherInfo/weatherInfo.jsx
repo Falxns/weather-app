@@ -1,7 +1,7 @@
 import React from 'react';
 import './weatherInfo.scss';
 
-function WeatherInfo() {
+function WeatherInfo({ cityData }) {
   return (
     <table className="weather-info">
       <thead>
@@ -26,16 +26,26 @@ function WeatherInfo() {
       </thead>
       <tbody>
         <tr className="weather-info__tr">
-          <td className="weather-info__td weather-info__city">Minsk</td>
-          <td className="weather-info__td weather-info__temperature">27 C</td>
+          <td className="weather-info__td weather-info__city">
+            {!cityData ? 'undef' : cityData.location.name}
+          </td>
+          <td className="weather-info__td weather-info__temperature">
+            {!cityData ? 'undef' : `${cityData.current.temp_c} °C`}
+          </td>
           <td className="weather-info__td weather-info__cloudiness">
-            light rain
+            {!cityData ? 'undef' : cityData.current.condition.text}
           </td>
           <td className="weather-info__td weather-info__wind">
-            North-East, 4.57 m/s
+            {!cityData
+              ? 'undef'
+              : `${cityData.current.wind_dir} ${cityData.current.wind_kph} km/h`}
           </td>
-          <td className="weather-info__td weather-info__pressure">1008 hpa</td>
-          <td className="weather-info__td weather-info__humidity">80%</td>
+          <td className="weather-info__td weather-info__pressure">
+            {!cityData ? 'undef' : `${cityData.current.pressure_mb} mb`}
+          </td>
+          <td className="weather-info__td weather-info__humidity">
+            {!cityData ? 'undef' : `${cityData.current.humidity} %`}
+          </td>
         </tr>
       </tbody>
     </table>
