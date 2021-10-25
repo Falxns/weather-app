@@ -6,7 +6,7 @@ import SearchBar from '../SearchBar/searchBar';
 import logoIcon from '../../assets/icons/logo.svg';
 import { getWeatherByCurrentPosition } from '../../api/weatherApi';
 
-function Header() {
+const Header = () => {
   const [currentCityData, setCurrentCityData] = useState(null);
 
   useEffect(() => {
@@ -21,6 +21,6 @@ function Header() {
       <TemperatureSwitch />
     </header>
   );
-}
+};
 
 export default Header;
