@@ -27,24 +27,24 @@ function WeatherInfo({ cityData }) {
       <tbody>
         <tr className="weather-info__tr">
           <td className="weather-info__td weather-info__city">
-            {!cityData ? 'undef' : cityData.location.region}
+            {!cityData ? 'N/A' : cityData.location.region}
           </td>
           <td className="weather-info__td weather-info__temperature">
-            {!cityData ? 'undef' : `${cityData.current.temp_c} °C`}
+            {!cityData ? 'N/A' : `${cityData.current.temp_c} °C`}
           </td>
           <td className="weather-info__td weather-info__cloudiness">
-            {!cityData ? 'undef' : cityData.current.condition.text}
+            {!cityData ? 'N/A' : cityData.current.condition.text}
           </td>
           <td className="weather-info__td weather-info__wind">
             {!cityData
-              ? 'undef'
+              ? 'N/A'
               : `${cityData.current.wind_dir} ${cityData.current.wind_kph} km/h`}
           </td>
           <td className="weather-info__td weather-info__pressure">
-            {!cityData ? 'undef' : `${cityData.current.pressure_mb} mb`}
+            {!cityData ? 'N/A' : `${cityData.current.pressure_mb} mb`}
           </td>
           <td className="weather-info__td weather-info__humidity">
-            {!cityData ? 'undef' : `${cityData.current.humidity} %`}
+            {!cityData ? 'N/A' : `${cityData.current.humidity} %`}
           </td>
         </tr>
       </tbody>
