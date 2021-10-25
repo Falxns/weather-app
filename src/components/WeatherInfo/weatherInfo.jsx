@@ -27,7 +27,7 @@ function WeatherInfo({ cityData }) {
       <tbody>
         <tr className="weather-info__tr">
           <td className="weather-info__td weather-info__city">
-            {!cityData ? 'undef' : cityData.location.name}
+            {!cityData ? 'undef' : cityData.location.region}
           </td>
           <td className="weather-info__td weather-info__temperature">
             {!cityData ? 'undef' : `${cityData.current.temp_c} °C`}

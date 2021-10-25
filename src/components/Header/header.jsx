@@ -10,11 +10,14 @@ function Header() {
   const [currentCityData, setCurrentCityData] = useState(null);
 
   useEffect(() => {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${'Minsk'}`)
-      .then((res) => res.json())
-      .then((res) => setCurrentCityData(res));
+    navigator.geolocation.getCurrentPosition((position) => {
+      fetch(
+        `http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${position.coords.latitude},${position.coords.longitude}`
+      )
+        .then((res) => res.json())
+        .then((res) => setCurrentCityData(res));
+    });
   }, []);
-  console.log(currentCityData);
   return (
     <header className="header">
       <img className="header__logo" src={logoIcon} alt="logo" />
