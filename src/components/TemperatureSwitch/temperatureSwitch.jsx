@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import './temperatureSwitch.scss';
-import temperatureContext from '../../context/temperature.context';
+import TemperatureContext from '../../context/temperature.context';
 
 function TemperatureSwitch() {
-  const { setTemperature } = useContext(temperatureContext);
+  const { setTemperature } = useContext(TemperatureContext);
   const handleTemperatureChange = (event) => {
     setTemperature(event.target.checked);
   };
