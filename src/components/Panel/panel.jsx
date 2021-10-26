@@ -15,6 +15,7 @@ Panel.defaultProps = {
 
 Panel.propTypes = {
   cityInfo: PropTypes.shape({
+    id: PropTypes.string,
     city: PropTypes.string,
     temp: PropTypes.string,
     cloudiness: PropTypes.string,

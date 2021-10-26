@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Panel from '../Panel/panel';
 
 const Main = ({ cities }) => {
-  const renderPanels = () => cities.map((cityInfo) => <Panel cityInfo={cityInfo} />);
+  const renderPanels = () => cities.map((city) => <Panel cityInfo={city} key={city.id} />);
 
   return <div className="main">{renderPanels()}</div>;
 };
@@ -16,6 +16,7 @@ Main.defaultProps = {
 Main.propTypes = {
   cities: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string,
       city: PropTypes.string,
       temp: PropTypes.string,
       cloudiness: PropTypes.string,
