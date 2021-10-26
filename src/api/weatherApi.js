@@ -1,10 +1,13 @@
 /* eslint-disable implicit-arrow-linebreak */
+import uniqid from 'uniqid';
+
 const KEY = '88f3ecccd19141f3a0680416212510';
 
 export const getWeather = async (query) => {
   const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${query}`);
   const json = await res.json();
   return {
+    id: uniqid(),
     city: json.location.name,
     temp: `${json.current.temp_c} °C`,
     cloudiness: json.current.condition.text,
