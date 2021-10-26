@@ -1,45 +1,65 @@
 import React from 'react';
 import './weatherInfo.scss';
+import PropTypes from 'prop-types';
 
-function WeatherInfo() {
-  return (
-    <table className="weather-info">
-      <thead>
-        <tr className="weather-info__tr">
-          <th className="weather-info__th weather-info__city-label">
-            Location
-          </th>
-          <th className="weather-info__th weather-info__temperature-label">
-            Temperature
-          </th>
-          <th className="weather-info__th weather-info__cloudiness-label">
-            Cloudiness
-          </th>
-          <th className="weather-info__th weather-info__wind-label">Wind</th>
-          <th className="weather-info__th weather-info__pressure-label">
-            Pressure
-          </th>
-          <th className="weather-info__th weather-info__humidity-label">
-            Humidity
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr className="weather-info__tr">
-          <td className="weather-info__td weather-info__city">Minsk</td>
-          <td className="weather-info__td weather-info__temperature">27 C</td>
-          <td className="weather-info__td weather-info__cloudiness">
-            light rain
-          </td>
-          <td className="weather-info__td weather-info__wind">
-            North-East, 4.57 m/s
-          </td>
-          <td className="weather-info__td weather-info__pressure">1008 hpa</td>
-          <td className="weather-info__td weather-info__humidity">80%</td>
-        </tr>
-      </tbody>
-    </table>
-  );
-}
+const WeatherInfo = ({ data }) => (
+  <table className="weather-info">
+    <thead>
+      <tr className="weather-info__tr">
+        <th className="weather-info__th weather-info__city-label">Location</th>
+        <th className="weather-info__th weather-info__temperature-label">
+          Temperature
+        </th>
+        <th className="weather-info__th weather-info__cloudiness-label">
+          Cloudiness
+        </th>
+        <th className="weather-info__th weather-info__wind-label">Wind</th>
+        <th className="weather-info__th weather-info__pressure-label">
+          Pressure
+        </th>
+        <th className="weather-info__th weather-info__humidity-label">
+          Humidity
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="weather-info__tr">
+        <td className="weather-info__td weather-info__city">
+          {!data ? 'N/A' : data.city}
+        </td>
+        <td className="weather-info__td weather-info__temperature">
+          {!data ? 'N/A' : data.temp}
+        </td>
+        <td className="weather-info__td weather-info__cloudiness">
+          {!data ? 'N/A' : data.cloudiness}
+        </td>
+        <td className="weather-info__td weather-info__wind">
+          {!data ? 'N/A' : data.wind}
+        </td>
+        <td className="weather-info__td weather-info__pressure">
+          {!data ? 'N/A' : data.pressure}
+        </td>
+        <td className="weather-info__td weather-info__humidity">
+          {!data ? 'N/A' : data.humidity}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+);
+
+WeatherInfo.defaultProps = {
+  data: null,
+};
+
+WeatherInfo.propTypes = {
+  data: PropTypes.shape({
+    city: PropTypes.string,
+    temp: PropTypes.string,
+    cloudiness: PropTypes.string,
+    wind: PropTypes.string,
+    pressure: PropTypes.string,
+    humidity: PropTypes.string,
+  }),
+};
 
 export default WeatherInfo;
