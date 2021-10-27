@@ -6,7 +6,7 @@ import plus from '../../assets/icons/plus.svg';
 const SearchBar = ({ addNewCity }) => {
   const [text, setText] = useState('');
 
-  const handleBtnCLick = async () => {
+  const handleBtnCLick = () => {
     addNewCity(text);
   };
 
