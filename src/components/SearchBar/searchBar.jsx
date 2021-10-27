@@ -3,11 +3,11 @@ import './searchBar.scss';
 import PropTypes from 'prop-types';
 import plus from '../../assets/icons/plus.svg';
 
-const SearchBar = ({ callback }) => {
+const SearchBar = ({ addNewCity }) => {
   const [text, setText] = useState('');
 
   const handleBtnCLick = async () => {
-    callback(text);
+    addNewCity(text);
   };
 
   const handleInputChange = (e) => {
@@ -31,7 +31,7 @@ const SearchBar = ({ callback }) => {
 };
 
 SearchBar.propTypes = {
-  callback: PropTypes.func.isRequired,
+  addNewCity: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

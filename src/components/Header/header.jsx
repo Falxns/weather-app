@@ -7,7 +7,7 @@ import SearchBar from '../SearchBar/searchBar';
 import logoIcon from '../../assets/icons/logo.svg';
 import { getWeatherByCurrentPosition } from '../../api/weatherApi';
 
-const Header = ({ callback }) => {
+const Header = ({ addNewCity }) => {
   const [currentCityData, setCurrentCityData] = useState(null);
 
   useEffect(() => {
@@ -18,14 +18,14 @@ const Header = ({ callback }) => {
     <header className="header">
       <img className="header__logo" src={logoIcon} alt="logo" />
       <WeatherInfo data={currentCityData} />
-      <SearchBar callback={callback} />
+      <SearchBar addNewCity={addNewCity} />
       <TemperatureSwitch />
     </header>
   );
 };
 
 Header.propTypes = {
-  callback: PropTypes.func.isRequired,
+  addNewCity: PropTypes.func.isRequired,
 };
 
 export default Header;

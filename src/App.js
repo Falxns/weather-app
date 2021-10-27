@@ -22,7 +22,7 @@ function App() {
 
   return (
     <TemperatureContext.Provider value={{ temperature, setTemperature }}>
-      <Header callback={addNewCity} />
+      <Header addNewCity={addNewCity} />
       <Main cities={cities} />
       <Footer />
     </TemperatureContext.Provider>
