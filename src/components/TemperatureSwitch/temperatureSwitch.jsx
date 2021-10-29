@@ -3,9 +3,9 @@ import './temperatureSwitch.scss';
 import TemperatureContext from '../../context/temperature.context';
 
 const TemperatureSwitch = () => {
-  const { setTemperature } = useContext(TemperatureContext);
+  const { setIsFahrenheit } = useContext(TemperatureContext);
   const handleTemperatureChange = (event) => {
-    setTemperature(event.target.checked);
+    setIsFahrenheit(event.target.checked);
   };
 
   return (

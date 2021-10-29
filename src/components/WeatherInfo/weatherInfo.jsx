@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import TemperatureContext from '../../context/temperature.context';
 
 const WeatherInfo = ({ data }) => {
-  const { temperature } = useContext(TemperatureContext);
+  const { isFahrenheit } = useContext(TemperatureContext);
 
-  const temp = temperature ? data?.tempF : data?.tempC;
+  const temperature = isFahrenheit ? data?.tempF : data?.tempC;
 
   return (
     <table className="weather-info">
@@ -23,7 +23,7 @@ const WeatherInfo = ({ data }) => {
       <tbody>
         <tr className="weather-info__tr">
           <td className="weather-info__td weather-info__city">{!data ? 'N/A' : data.city}</td>
-          <td className="weather-info__td weather-info__temperature">{temp ?? 'N/A'}</td>
+          <td className="weather-info__td weather-info__temperature">{temperature ?? 'N/A'}</td>
           <td className="weather-info__td weather-info__cloudiness">
             {!data ? 'N/A' : data.cloudiness}
           </td>
