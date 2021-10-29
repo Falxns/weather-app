@@ -7,7 +7,7 @@ import TemperatureContext from './context/temperature.context';
 import { getWeather } from './api/weatherApi';
 
 function App() {
-  const [temperature, setTemperature] = useState(false);
+  const [isFahrenheit, setIsFahrenheit] = useState(false);
   const [cities, setCities] = useState([]);
 
   const addNewCity = useCallback(
@@ -21,7 +21,7 @@ function App() {
   );
 
   return (
-    <TemperatureContext.Provider value={{ temperature, setTemperature }}>
+    <TemperatureContext.Provider value={{ isFahrenheit, setIsFahrenheit }}>
       <Header addNewCity={addNewCity} />
       <Main cities={cities} />
       <Footer />

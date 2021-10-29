@@ -18,7 +18,8 @@ Main.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       city: PropTypes.string,
-      temp: PropTypes.string,
+      tempC: PropTypes.string,
+      tempF: PropTypes.string,
       cloudiness: PropTypes.string,
       wind: PropTypes.string,
       pressure: PropTypes.string,

@@ -9,7 +9,8 @@ export const getWeather = async (query) => {
   return {
     id: uniqid(),
     city: json.location.name,
-    temp: `${json.current.temp_c} °C`,
+    tempC: `${json.current.temp_c} °C`,
+    tempF: `${json.current.temp_f} ℉`,
     cloudiness: json.current.condition.text,
     wind: `${json.current.wind_dir} ${json.current.wind_kph} km/h`,
     pressure: `${json.current.pressure_mb} mb`,
