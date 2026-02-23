@@ -1,5 +1,9 @@
 # Weather App
 
+[![Deploy to GitHub Pages](https://github.com/Falxns/weather-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/Falxns/weather-app/actions/workflows/deploy.yml)
+
+**[Live Demo](https://falxns.github.io/weather-app/)**
+
 A modern, responsive weather application built with React 18 and Vite. Track weather conditions for multiple cities with a beautiful glassmorphism UI.
 
 ## Features
